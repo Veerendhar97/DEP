@@ -3,11 +3,11 @@
 Object.prototype.hash = function(string) {
   var array = string.split(".");
   myObj = obj;
-  for (var i = 0; i < array.length; i++) {
-    if (myObj[array[i]] == undefined) {
+  for (var i in array) {
+    if (myObj[i] == undefined) {
       return undefined;
     } else {
-      myObj = myObj[array[i]];
+      myObj = myObj[i];
     }
   }
   return myObj;
