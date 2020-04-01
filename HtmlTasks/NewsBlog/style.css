@@ -1,0 +1,168 @@
+* {
+  margin: 0%;
+  font-family: Roboto;
+}
+#outerdiv {
+  background: #001a4d;
+  padding: 38px;
+  margin: 5px;
+  width: 95%;
+}
+
+#indiv {
+  font-family: sans-serif;
+  border: 3px solid red;
+  background: white;
+  padding: 20px 20px;
+  height: 50px;
+
+  width: 250px;
+}
+
+#blogsec {
+  font-size: 200%;
+  color: #001a4d;
+}
+
+#newssec {
+  font-size: small;
+  font-weight: 500;
+  color: #001a4d;
+}
+
+.div2 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  flex: 1;
+}
+
+.cat-div {
+  padding-left: 2%;
+  padding-right: 10%;
+  flex: 1;
+}
+
+.cat-div p span {
+  font-weight: bold;
+  line-height: 3;
+  color: black;
+}
+
+select {
+  border: 1px solid black;
+
+  width: 200px;
+  height: 30px;
+  flex: 1;
+}
+
+.news-div {
+  padding-right: 22%;
+  padding-left: 18%;
+  flex: 1;
+}
+
+.news-div p {
+  font-size: xx-large;
+}
+
+.sub-div {
+  padding-right: 2%;
+  display: flex;
+
+  flex: 1;
+  flex-direction: column;
+}
+
+.sub-div span {
+  font-weight: bold;
+  line-height: 3;
+  color: black;
+}
+
+.sub-div input {
+  height: 23px;
+  border: 1px solid black;
+  flex: 1;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: 0px;
+
+  height: 28px;
+  width: 40px;
+  padding: 1%;
+
+  flex: 1;
+}
+
+.img1 {
+  background-color: #d9d9d9;
+  width: 300px;
+  height: 300px;
+}
+
+.news1 {
+  padding: 30px;
+  display: flex;
+  flex: 1;
+}
+
+.news1 h1 {
+  color: #001a4d;
+}
+
+.content1 {
+  padding: 30px;
+  padding-right: 300px;
+  flex: 1;
+}
+
+.content1 section span {
+  color: #808080;
+}
+
+.content1 p {
+  line-height: 1.6;
+}
+
+.cont-read {
+  background-color: #cc0000;
+  color: white;
+  padding: 2px;
+  width: 150px;
+}
+
+hr {
+  color: #f2f2f2;
+  width: 85%;
+  border: 0%;
+}
+
+.main {
+  color: #595959;
+  width: 97%;
+  align-items: center;
+}
+
+.email {
+  height: 2px;
+  width: 50px;
+  padding-top: 0px;
+  display: flex;
+  flex: 1;
+}
+
+footer {
+  background: #001a4d;
+  color: white;
+  height: 60px;
+  padding-top: 30px;
+}
+
+.allnews {
+  padding-top: 20px;
+}
