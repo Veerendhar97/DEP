@@ -1,0 +1,18 @@
+Test/Level_Zero_File_01.txt
+  sha1: 25b01b167a07646d1e70e7d23f4a6a958ae268dd  md5: af91ab712571291fef815224edad0374
+
+Test/Level_Zero_File_02.txt
+  sha1: 32782ab488dbce84f805fa92418b40241607b2f7  md5: 71c3ba8f3b3aa391f94dbc90d558d75a
+
+Test/Level_Zero_File_03.txt
+  sha1: e016504011d30646735e452e5344022e9810944e  md5: 46cf8293ff6e9f7f0d5807d3d7831c99
+
+Test/Level_Zero_Folder_01/Level_One_File_11.txt
+  sha1: 2502851ef8816458db65c34e9ef058737e2bf5cb  md5: a2afa8d5c94bcd7e3ed31a5f27f634b2
+
+Test/Level_Zero_Folder_02/Level_One_File_21.txt
+  sha1: 4472adeabbfa7a76294aa86b7a1f718866dc483c  md5: 4a5a11f9175e8d2a803a44b56ed0510b
+
+Test/Level_Zero_Folder_02/Level_One_Folder_21/Level_Three_File_21.txt
+  sha1: 4c2f858be7b2f4a4162f70585f7cda7ad13e1f1a  md5: b1610b0a049ee9b0057da1f0e9aa116d
+

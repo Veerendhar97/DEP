@@ -1,0 +1,11 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Task1.js",
+  "scripts": {
+    "test": "pack"
+  },
+  "author": "",
+  "license": "MIT"
+}
