@@ -1,0 +1,65 @@
+#outerdiv {
+  padding: 15px;
+  margin: 5px;
+  width: 95%;
+}
+#indiv {
+  padding: 5% 7%;
+  height: 30px;
+  width: 100px;
+}
+#blogsec {
+  font-size: 100%;
+  color: #001a4d;
+}
+
+#newssec {
+  font-size: x-small;
+  font-weight: 500;
+  color: #001a4d;
+}
+.div2 {
+  dispaly: flex;
+  flex-direction: column;
+}
+.allnews {
+  display: none;
+}
+.content1 {
+  padding: 30px;
+  padding-right: 0px;
+  flex: 1;
+}
+
+.img1 {
+  background-color: #d9d9d9;
+  width: 200px;
+  height: 200px;
+}
+.news1 {
+  flex-direction: column;
+  align-items: center;
+}
+hr {
+  width: 100%;
+}
+.cat-div {
+  padding-left: 22%;
+}
+.cat-div span {
+  padding-left: 10%;
+}
+.sub-div {
+  flex-direction: column;
+  flex: 3;
+  padding-left: 20%;
+}
+.sub-div span {
+  padding-left: 20%;
+}
+.email {
+  align-items: center;
+}
+.cont-read {
+  margin-left: 20%;
+}
