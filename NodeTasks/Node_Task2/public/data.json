@@ -1,0 +1,14 @@
+{
+  "firstName": "Jack",
+  "lastName": "Racher",
+  "gender": "Male",
+  "age": 24,
+  "email": "JackRacher@epam.in",
+  "address": {
+    "streetAddress": "126 Udhna",
+    "city": "San Jone",
+    "state": "CA",
+    "postalCode": "394221"
+  },
+  "phoneNumbers": [{ "type": "home", "number": "7383627627" }]
+}
