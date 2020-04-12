@@ -6,24 +6,27 @@ const recFileRead = (res, dir) => {
   if (res.isDirectory()) {
     //Identifing directory and reading files in it
     fs.readdir(dir, (err, files) => {
-      for (let file of files) {
-        path = `${dir}/${file}`;
-        pathObj = paths.resolve(path);
-        const res2 = fs.statSync(pathObj);
-        if (res2.isFile()) {
-          //Reading File
-          var read = fs.readFileSync(pathObj).toString();
-          console.log(read);
+      if (files)
+        for (let file of files) {
+          path = `${dir}/${file}`;
+          pathObj = paths.resolve(path);
+          const res2 = fs.statSync(pathObj);
+          if (res2.isFile()) {
+            //Reading File
+            var read = fs.readFileSync(pathObj).toString();
+            console.log(read);
 
-          //Creating hash for file content
-          const hash1 = crypto.createHmac("sha1", pathObj).digest("hex");
-          const hash2 = crypto.createHmac("md5", pathObj).digest("hex");
+            //Creating hash for file content
+            const hash1 = crypto.createHmac("sha1", pathObj).digest("hex");
+            const hash2 = crypto.createHmac("md5", pathObj).digest("hex");
 
-          //Appending it to Result.txt
-          data = `${pathObj}\n  sha1: ${hash1}  md5: ${hash2}\n\n`;
-          fs.appendFileSync("Result.txt", data);
-        } else recFileRead(res2, pathObj);
-      }
+            //Appending it to Result.txt
+            data = `${pathObj}\n  sha1: ${hash1}  md5: ${hash2}\n\n`;
+            fs.appendFileSync("Result.txt", data);
+          } else recFileRead(res2, pathObj);
+        }
+    };
+      if (err)  console.log(err); 
     });
   }
 };
