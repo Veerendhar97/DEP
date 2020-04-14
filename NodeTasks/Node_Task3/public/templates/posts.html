@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/javascripts/post.js"></script>
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/posts.css" />
+  </head>
+  <body onload="getPosts() ">
+    <header>
+      <div class="head">
+        <h1>Posts</h1>
+        <h3 id="h3"></h3>
+        <button class="btn btn-secondary btns" onclick="signout()">
+          Signout
+        </button>
+      </div>
+    </header>
+
+    <form method="post" action="new" class="form-group posts">
+      New Post:<br />
+      <textarea name="content"></textarea><br />
+
+      <button class="btn btn-info">Post</button>
+    </form>
+    <div id="posts-div"></div>
+  </body>
+</html>

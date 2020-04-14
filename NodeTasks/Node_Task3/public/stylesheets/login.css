@@ -1,0 +1,24 @@
+.head {
+  width: 98%;
+  height: 80px;
+  background-color: #3b5998;
+  margin: 1%;
+  border-radius: 10px;
+}
+.head h1 {
+  float: left;
+  margin-left: 1%;
+  color: white;
+}
+.btns {
+  float: right;
+  margin: 2%;
+}
+
+.login {
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 2%;
+  margin-left: 25%;
+}
