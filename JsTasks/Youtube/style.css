@@ -1,0 +1,99 @@
+.top {
+  display: flex;
+  height: 80px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  background: rgb(5, 237, 253);
+}
+
+.search {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 1000px;
+  display: flex;
+  background: white;
+  border-radius: 20px;
+  border: solid rgb(170, 168, 168);
+}
+
+input {
+  flex: 1;
+  height: 30px;
+  width: 100px;
+  background: white;
+  border: solid white;
+  border-radius: 30px;
+  padding-left: 15px;
+}
+
+#button {
+  height: 37px;
+  width: 80px;
+  border-radius: 45px;
+  border: solid white;
+  background-color: white;
+  color: rgb(16, 133, 230);
+  font-size: medium;
+  font-weight: bold;
+}
+
+#listingTable {
+  padding: 30px 0px 30px 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  font-family: sans-serif;
+  background: rgb(243, 241, 241);
+}
+
+#innerdiv1 {
+  width: 407px;
+  height: 235px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+#innerdiv2 {
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 550;
+}
+#innerdiv3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+}
+
+#paginate {
+  padding: 10px 50px 20px 40px;
+}
+
+.nav {
+  font-size: large;
+  background-color: rgb(5, 237, 253);
+  color: white;
+  border: solid white;
+  border-radius: 10px;
+  height: 37px;
+  width: 80px;
+}
+a {
+  text-decoration: none;
+}
+iframe {
+  border-radius: 20px 20px 0px 0px;
+  border: solid white;
+}
+#btn_next {
+  float: right;
+}
+#btn_prev {
+  float: left;
+}
+#line {
+  width: 375px;
+}

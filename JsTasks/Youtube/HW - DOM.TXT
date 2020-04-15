@@ -1,0 +1,169 @@
+Task: Create web-application for load and search info about YouTube videos using user's request.
+
+Use-case:
+1. User opens the application and see search input
+2. User types the topic inside of search input. For example javascript
+3. Application makes call to YouTube REST API and shows results as thumbnails in horizontal list
+4. List is scrolled through click on the page. Video count on the page depends on screen size. 
+5. Load 15 records, the rest if the records that doesn't in the screen will go into pagination. The page numbers will be below the thumbnails.
+
+Requirements:
+1. Chrome support and one mobile platform
+2. HTML creates using JS. Almost no code inside index.html.
+3. No jquery or other frameworks. You can use only lodash.
+4. JS code should be splitted to different files depending on architecture.
+5. Minimal info about video is title with link on youtube, preview, description, author, published date, count of views.
+6. Data from youtube could be received using:
+- https://www.googleapis.com/youtube/v3/search?key=AIzaSyCTWC75i70moJLzyNh3tt4jzCljZcRkU8Y&type=video&part=snippet&maxResults=15&q=js
+- https://www.googleapis.com/youtube/v3/videos?key=AIzaSyCTWC75i70moJLzyNh3tt4jzCljZcRkU8Y&id=nq4aU9gmZQk,REu2BcnlD34,qbPTdW7KgOg&part=snippet,statistics
+- how too receive API key - https://www.youtube.com/watch?v=JbWnRhHfTDA
+- full documentation - https://developers.google.com/youtube/v3/
+7. Design should be not ugly
+
+
+
+
+
+
+
+
+
+AIzaSyAq0AXT6tMRcAa2USyFTLCzvwE3QpJ0qcY
+
+
+
+
+
+
+
+
+js code
+
+
+// let topdiv = document.createElement("div");
+// topdiv.setAttribute("class", "top");
+// let searchdiv = document.createElement("div");
+// searchdiv.setAttribute("class", "search");
+// let textbox = document.createElement("input");
+// textbox.setAttribute("id", "input");
+// let line = document.createElement("hr");
+// let button = document.createElement("button");
+// button.setAttribute("id", "button");
+// searchdiv.appendChild(textbox);
+// searchdiv.appendChild(line);
+// searchdiv.appendChild(button);
+// topdiv.appendChild(searchdiv);
+// console.log(topdiv);
+// let container = document.createElement("div");
+// button.setAttribute("id", "container");
+// document.body.append(topdiv);
+// document.body.append(container);
+let searchspace = `<div class="top">
+<div class="search">
+  <input id="input" />
+  <hr />
+  <button id="button">Search</button>
+</div>
+</div>
+<hr />
+<div id="listingTable"></div>
+<div id="paginate"></div>`;
+
+let current_page = 1;
+let records_per_page = 6;
+let i = 0;
+
+var objJson = [];
+document.getElementById("body").innerHTML = searchspace;
+console.log(document.getElementById("input").value);
+document.getElementById("button").addEventListener("click", getData);
+function getData() {
+  let url =
+    "https://www.googleapis.com/youtube/v3/search?key=AIzaSyAq0AXT6tMRcAa2USyFTLCzvwE3QpJ0qcY&type=video&part=snippet&maxResults=30&q=" +
+    document.getElementById("input").value;
+  fetch(url)
+    .then(function(res) {
+      return res.json();
+    })
+    .then(function(data) {
+      console.log(data);
+      let output = "";
+      let datum = data.items;
+      objJson = [];
+      for (post of datum) {
+        objJson.push(post);
+        // output =
+        //   output +
+        //   `<div id="innerdiv1">
+        //     <div >
+        //      <iframe width="560" height="250" src="https://www.youtube.com/embed/${post.id.videoId} " ></iframe>
+        //     </div>
+        //    <div  id="innerdiv2"> <p id="description">${post.snippet.title}</p></div>
+        //   </div>`;
+      }
+      //document.getElementById("container").innerHTML = output;
+      changePage(1);
+    });
+}
+console.log(objJson);
+function prevPage() {
+  if (current_page > 1) {
+    current_page--;
+    changePage(current_page);
+  }
+}
+function nextPage() {
+  if (current_page < numPages()) {
+    current_page++;
+    changePage(current_page);
+  }
+}
+
+function changePage(page) {
+  footer = `
+    <div><a href="javascript:prevPage()" id="btn_prev">prev</a></div>
+  <div><a href="javascript:nextPage()" id="btn_next">next</a></div>
+  <span id="page"></span>`;
+  document.getElementById("paginate").innerHTML = footer;
+  var btn_next = document.getElementById("btn_next");
+  var btn_prev = document.getElementById("btn_prev");
+  var listing_table = document.getElementById("listingTable");
+  var page_span = document.getElementById("page");
+
+  // Validate page
+  if (page < 1) page = 1;
+  if (page > numPages()) page = numPages();
+
+  //listing_table.innerHTML = "";
+  let output = "";
+  for (i = (page - 1) * records_per_page; i < page * records_per_page; i++) {
+    console.log(objJson[i].id.videoId);
+    output =
+      output +
+      `<div id="innerdiv1">
+            <div >
+            <iframe width="560" height="250" src="https://www.youtube.com/embed/${objJson[i].id.videoId} " ></iframe>
+            </div>
+            <div  id="innerdiv2"> <p id="description">${objJson[i].snippet.title}</p></div>
+           </div>
+           `;
+  }
+  listing_table.innerHTML = output;
+  // page_span.innerHTML = page;
+
+  if (page == 1) {
+    btn_prev.style.visibility = "hidden";
+  } else {
+    btn_prev.style.visibility = "visible";
+  }
+
+  if (page == numPages()) {
+    btn_next.style.visibility = "hidden";
+  } else {
+    btn_next.style.visibility = "visible";
+  }
+}
+
+function numPages() {
+  return Math.ceil(objJson.length / records_per_page);
+}
