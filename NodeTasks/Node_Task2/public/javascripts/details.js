@@ -2,7 +2,6 @@ function getData() {
   fetch("../data.json")
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       var para = document.createElement("p");
       para.innerHTML = `
      <h3> Name:</h3> ${data.firstName + " "}${data.lastName}</br>
