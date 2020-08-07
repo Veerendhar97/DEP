@@ -1,0 +1,18 @@
+C:\Users\Veerendhar_Arepally\DEP\DEPTraining\NodeTasks\Node_Task1\Test\Level_Zero_File_01.txt
+  sha1: 116181178fff2371eb353206e361bf84db0ae27f  md5: ecdb6649b3c1589b3b386fca0d03e945
+
+C:\Users\Veerendhar_Arepally\DEP\DEPTraining\NodeTasks\Node_Task1\Test\Level_Zero_File_02.txt
+  sha1: dd4b94b5899458060ae89159bcb10b205378f412  md5: ed2124c6c1e1c6c0aeecf80cc1d72b25
+
+C:\Users\Veerendhar_Arepally\DEP\DEPTraining\NodeTasks\Node_Task1\Test\Level_Zero_File_03.txt
+  sha1: 6052f6791579694129fc5e5e62a6c3deb37f9aa7  md5: 98ace78f46dface1d8e230e64af727d5
+
+C:\Users\Veerendhar_Arepally\DEP\DEPTraining\NodeTasks\Node_Task1\Test\Level_Zero_Folder_01\Level_One_File_11.txt
+  sha1: 93a8ae4228c69fcf3a364105f36dd343d1f1cdff  md5: 256bbf6a7e2b52f249d3ea2e629efe66
+
+C:\Users\Veerendhar_Arepally\DEP\DEPTraining\NodeTasks\Node_Task1\Test\Level_Zero_Folder_02\Level_One_File_21.txt
+  sha1: a603c938e94890df0841b6806207a9ef22ce9af7  md5: caa16048c208c8a94502f656e3da0869
+
+C:\Users\Veerendhar_Arepally\DEP\DEPTraining\NodeTasks\Node_Task1\Test\Level_Zero_Folder_02\Level_One_Folder_21\Level_Three_File_21.txt
+  sha1: 27058fe5b562efbbb1bed4072fc952c25d658cec  md5: 0ca4df8afeac19aa01e61d84f7b7ac70
+

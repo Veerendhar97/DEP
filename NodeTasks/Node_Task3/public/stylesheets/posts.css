@@ -1,0 +1,64 @@
+.head {
+  display: flex;
+  flex-direction: row;
+  width: 98%;
+  height: 80px;
+  background-color: #3b5998;
+  margin: 1%;
+  border-radius: 10px;
+}
+h2 {
+  align-self: center;
+}
+#h3 {
+  color: white;
+  margin-left: 33%;
+  margin-right: 30%;
+  padding-top: 6px;
+}
+.head h1 {
+  float: left;
+  margin-left: 1%;
+  color: white;
+}
+.posts {
+  border: 1px solid black;
+  padding: 2%;
+  width: 55%;
+  border-radius: 10px;
+  margin-left: 25%;
+}
+.btns {
+  float: right;
+  margin: 2%;
+}
+textarea {
+  width: 100%;
+}
+#posts-div {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 0% 1% 2% 1%;
+  width: 55%;
+  border-radius: 10px;
+  margin-left: 25%;
+}
+.inner-div {
+  border: 1px solid rgb(204, 206, 206);
+  padding: 2%;
+  width: 70%;
+  border-radius: 10px;
+  margin-left: 15%;
+}
+.label1 {
+  color: rgb(35, 156, 35);
+  font-size: medium;
+}
+.label2 {
+  color: rgb(235, 57, 57);
+  font-size: medium;
+}
+.value {
+  font-size: medium;
+}

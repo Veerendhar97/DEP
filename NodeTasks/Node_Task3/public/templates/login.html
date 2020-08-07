@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/login.css" />
+  </head>
+  <body>
+    <header>
+      <div class="head">
+        <h1>Login</h1>
+      </div>
+    </header>
+    <form method="post" action="users/login" class="form-group login">
+      User Name:<input
+        type="text"
+        name="username"
+        class="form-control uname"
+      /><br />
+      Password :
+      <input
+        type="password"
+        name="password"
+        class="form-control password"
+      /><br />
+      <button class="btn btn-success">Login</button>
+    </form>
+    <p class="invalid"></p>
+  </body>
+</html>
